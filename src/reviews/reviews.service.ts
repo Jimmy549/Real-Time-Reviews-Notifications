@@ -25,7 +25,7 @@ export class ReviewsService {
       receiverId: 'broadcast',
       senderId: reviewData.userId,
       type: 'review',
-      message: `${populatedReview.userId?.username || 'Someone'} added a new review`,
+      message: `${(populatedReview.userId as any)?.username || 'Someone'} added a new review`,
       reviewId: savedReview._id,
     });
 
